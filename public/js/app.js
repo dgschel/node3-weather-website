@@ -7,7 +7,7 @@ const loading = document.querySelector('#loading');
 weatherForm.addEventListener('submit', (e) => {
     e.preventDefault();
     const location = addressInput.value;
-    const url = 'http://localhost:3000/weather?address=' + location;
+    const url = '/weather?address=' + location;
 
 
     loading.textContent = 'loading...';
