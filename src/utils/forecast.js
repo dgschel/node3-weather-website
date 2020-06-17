@@ -10,8 +10,8 @@ const forecast = (lat, long, callback) => {
             callback('Position konnte nicht gefunden werden', undefined)
         }
         else {
-            const { temperature, feelslike } = body.current;
-            callback(undefined, 'Es ist ' + temperature + ' grad. Es fühlt sich an wie ' + feelslike + ' grad.')
+            const { temperature, feelslike, humidity } = body.current;
+            callback(undefined, 'Es ist ' + temperature + ' grad. Es fühlt sich an wie ' + feelslike + ' grad.\n Luftfeuchtigkeit liegt bei ' + humidity + '%.')
         }
     })
 }
